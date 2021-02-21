@@ -13,4 +13,6 @@ app.get("/cotacoes/:chamado/:item/:descricao/:valor", function(req, res){
 
 })
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
+//app.use(express.static('/public/js'));
+
