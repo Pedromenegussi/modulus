@@ -27,6 +27,6 @@ function capta_dados(){
     const observacoes = document.getElementById("observacoes").value
     const nfe = document.getElementById("nfe").value
 
-    console.log(data_pc, p_c, cotacao, fornecedor, partnumber, descricao,qtd, sn, finalidade, v_dolar, v_real, frete_interno, frete_usa, custo_final, estorno, forma_pgto, forma_envio, recebido_em, tempo_dias, observacoes,nfe)
+    //console.log(data_pc, p_c, cotacao, fornecedor, partnumber, descricao,qtd, sn, finalidade, v_dolar, v_real, frete_interno, frete_usa, custo_final, estorno, forma_pgto, forma_envio, recebido_em, tempo_dias, observacoes,nfe)
 
 }
