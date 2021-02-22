@@ -14,7 +14,7 @@ app.get("/cotacoes/:chamado/:item/:descricao/:valor", function(req, res){
     
 });
 
-app.get("pegaformulario", function(req, res){
+app.post("/pegaformulario", function(req, res){
     res.send("<h1>Peguei o formulário</h1>")
 });
 
