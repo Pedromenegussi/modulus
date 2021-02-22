@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 
 app.listen(8089, function(){
-    console.log("Servidor rodando na url: http://localhost:8081")
+    const port = "8089"
+    console.log("Servidor rodando na url: http://localhost:"+port)
 });
 
 app.get("/", function(req, res){
@@ -10,7 +11,11 @@ app.get("/", function(req, res){
 });
 
 app.get("/cotacoes/:chamado/:item/:descricao/:valor", function(req, res){
-    res.send("<h2>Cotação: "+req.params.cotacoes+"</h2:")
-})
+    
+});
+
+app.get("pegaformulario", function(req, res){
+    res.send("<h1>Peguei o formulário</h1>")
+});
 
 app.use(express.static('public'));
