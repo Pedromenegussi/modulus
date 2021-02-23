@@ -14,7 +14,7 @@ function capta_dados(){
     const frete_usa = Number(document.getElementById("frete_usa").value)
     const frete_br = Number(document.getElementById("frete_br").value) 
     const tot = qtd * v_real + (frete_br + frete_interno + frete_usa);
-    console.log(qtd, v_real, tot)
+    //console.log(qtd, v_real, tot)
     document.getElementById('custo_final').value = tot;
     const estorno = Number(document.getElementById("estorno").value)
     const forma_pgto = document.getElementById("forma_pgto").value
@@ -27,6 +27,6 @@ function capta_dados(){
     const observacoes = document.getElementById("observacoes").value
     const nfe = document.getElementById("nfe").value
 
-    console.log(data_pc, p_c, cotacao, fornecedor, partnumber, descricao,qtd, sn, finalidade, v_dolar, v_real, frete_interno, frete_usa, custo_final, estorno, forma_pgto, forma_envio, recebido_em, tempo_dias, observacoes,nfe)
+    //console.log(data_pc, p_c, cotacao, fornecedor, partnumber, descricao,qtd, sn, finalidade, v_dolar, v_real, frete_interno, frete_usa, custo_final, estorno, forma_pgto, forma_envio, recebido_em, tempo_dias, observacoes,nfe)
 
 }

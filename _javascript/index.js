@@ -6,8 +6,12 @@ app.listen(8089, function(){
     console.log("Servidor rodando na url: http://localhost:"+port)
 });
 
+app.use(express.urlencoded({
+    extended: true
+}))
+
 app.get("/", function(req, res){
-    res.sendFile(__dirname + "/html/index.html")
+    res.sendFile(__dirname + "/views/index.html")
 });
 
 app.get("/cotacoes/:chamado/:item/:descricao/:valor", function(req, res){
@@ -15,7 +19,8 @@ app.get("/cotacoes/:chamado/:item/:descricao/:valor", function(req, res){
 });
 
 app.post("/pegaformulario", function(req, res){
-    res.send("<h1>Peguei o formulário</h1>")
+    res.send("Data: "+req.body.data_pc+ "Processo de Compra: "+req.body.p_c)
 });
 
 app.use(express.static('public'));
+
