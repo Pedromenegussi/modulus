@@ -69,4 +69,4 @@ const mapa_de_compra = sequelize.define('mapa_de_compras', {
     }
 })
 
-module.exports = mapa_de_compra
+module.exports = mapa_de_compra;
