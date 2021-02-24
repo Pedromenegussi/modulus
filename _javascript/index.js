@@ -8,17 +8,13 @@ app.listen(8089, function(){
     console.log("Servidor rodando na url: http://localhost:"+port)
 });
 
-app.use(express.urlencoded({
-    extended: true
-}))
-
 //ROTAS
 app.get("/", function(req, res){
-    res.sendFile(__dirname + "/views/index.html")
+    res.sendFile(__dirname+"/public/views/index.html")
 });
 
 app.get("/form_compras", function(req, res){
-    res.sendFile(__dirname+"/views/form_compras.html")
+    res.sendFile(__dirname+"/public/views/form_compras.html")
 });
 
 app.post("/pegaformulario", function(req, res){
@@ -46,7 +42,7 @@ app.post("/pegaformulario", function(req, res){
         obs: req.body.obs,
         nfe: req.body.nfe
     }).then(function(){
-        res.redirect('/')
+        res.redirect('/form_compras')
     }).catch(function(erro){
         res.send("Houve um erro! "+erro)
     })
