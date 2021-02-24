@@ -9,3 +9,8 @@ sequelize.authenticate().then(function(){
 }).catch(function(erro){
     console.log('falha ao se conectar! '+erro)
 })
+
+module.exports = {
+    Sequelize: Sequelize,
+    sequelize: sequelize
+}
