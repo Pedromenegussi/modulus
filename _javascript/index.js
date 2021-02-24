@@ -1,19 +1,16 @@
 const express = require("express");
 const app = express();
 const BodyParser = require("body-parser")
-const mapa_de_compra = require('./models/post')
+const mapa_de_compra = require("./models/post");
 
 app.listen(8089, function(){
     const port = "8089"
     console.log("Servidor rodando na url: http://localhost:"+port)
 });
 
-app.use(express.urlencoded({
-    extended: true
-}))
-
+//ROTAS
 app.get("/", function(req, res){
-    res.sendFile(__dirname + "/views/index.html")
+    res.sendFile(__dirname+"/public/views/index.html")
 });
 
 app.get("/form_compras", function(req, res){
@@ -58,4 +55,4 @@ app.use(express.static('public'));
 app.use(BodyParser.urlencoded({extended:false}))
 app.use(BodyParser.json())
 
-
+ 
