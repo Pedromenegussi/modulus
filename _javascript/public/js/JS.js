@@ -26,5 +26,7 @@ function capta_dados(){
     const observacoes = document.getElementById("observacoes").value
     const nfe = document.getElementById("nfe").value
 
-
+};
+function cadastra(){
+    alert('Cadastrado!')
 }
