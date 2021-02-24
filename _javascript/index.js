@@ -8,6 +8,10 @@ app.listen(8089, function(){
     console.log("Servidor rodando na url: http://localhost:"+port)
 });
 
+//BodyParser
+app.use(BodyParser.urlencoded({extended:false}))
+app.use(BodyParser.json())
+
 //ROTAS
 app.get("/", function(req, res){
     res.sendFile(__dirname+"/public/views/index.html")
@@ -15,7 +19,7 @@ app.get("/", function(req, res){
 
 app.get("/form_compras", function(req, res){
     res.sendFile(__dirname+"/views/form_compras.html")
-})
+});
 
 app.post("/pegaformulario", function(req, res){
     mapa_de_compra.create({
@@ -50,9 +54,5 @@ app.post("/pegaformulario", function(req, res){
 
 
 app.use(express.static('public'));
-
-//BodyParser
-app.use(BodyParser.urlencoded({extended:false}))
-app.use(BodyParser.json())
 
  
