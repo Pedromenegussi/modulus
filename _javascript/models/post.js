@@ -61,9 +61,6 @@ const mapa_de_compra = sequelize.define('mapa_de_compras', {
     recebido_em: {
         type: Sequelize.DATE
     },
-    tempo_dias: {
-        type: Sequelize.INTEGER
-    },
     obs:{
         type: Sequelize.TEXT
     },
@@ -72,4 +69,4 @@ const mapa_de_compra = sequelize.define('mapa_de_compras', {
     }
 })
 
-//mapa_de_compra.sync({force: true})
+module.exports = mapa_de_compra
