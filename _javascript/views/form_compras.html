@@ -19,23 +19,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">StockStatus</a>
+                    <a class="nav-link" href="/stockstatus">StockStatus</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Compras</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Cotações</a>
-                </li>
-                
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Logística</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">?</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">?</a></li>
-                        <!--<li><a class="dropdown-item" href="#"></a></li>-->
-                    </ul>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Compras</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/form_compras">Adicionar nova compra</a>
+                      <a class="dropdown-item" href="/listar_compras">Listar compras</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cotacoes">Cotações</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -53,11 +47,11 @@
             </div>
             <div class="col">
                 <label>Processo de Compra: </label><BR>
-                <input type="text" name="p_c" id="p_c" value="000/00"  > <BR>
+                <input type="text" name="p_c" id="p_c" value="000/00"> <BR>
             </div>
             <div class="col">
                 <label>Cotação: </label><BR>
-                <input type="text" name="cotacao" id="cotacao" value="000/00"  > <BR>
+                <input type="text" name="cotacao" id="cotacao" value="000/00"> <BR>
             </div>
             <div class="col">
                 <label>Fornecedor: </label><BR>

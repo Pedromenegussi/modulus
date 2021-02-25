@@ -14,12 +14,24 @@ app.use(BodyParser.json())
 
 //ROTAS
 app.get("/", function(req, res){
-    res.sendFile(__dirname+"/public/views/index.html")
+    res.sendFile(__dirname+"/views/index.html")
+});
+
+app.get("/stockstatus", function(req, res){
+    res.sendFile(__dirname+"/views/stockstatus.html")
+});
+
+app.get("/cotacoes", function(req, res){
+    res.sendFile(__dirname+"/views/cotacoes.html")
 });
 
 app.get("/form_compras", function(req, res){
     res.sendFile(__dirname+"/views/form_compras.html")
 });
+
+app.get("/listar_compras", function(req, res){
+    res.sendFile(__dirname+"/views/listar_compras.html")
+})
 
 app.post("/pegaformulario", function(req, res){
     mapa_de_compra.create({
