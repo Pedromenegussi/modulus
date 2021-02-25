@@ -2,6 +2,19 @@ const express = require("express");
 const app = express();
 const BodyParser = require("body-parser")
 const mapa_de_compra = require("./models/post");
+const handlebars = require('express-handlebars')
+
+//Conexão com banco de dados MYSQL
+const Sequelize = require("sequelize")
+const sequelize = new Sequelize('logistica', 'root', '27452121', {
+    host: 'localhost',
+    dialect: 'mysql'
+})
+
+//Config
+    //Template Engine
+    app.engine('handlebars', handlebars({defaultLayout: 'main'}))
+    app.set('view engine', 'handlebars')
 
 app.listen(8089, function(){
     const port = "8089"
@@ -30,7 +43,10 @@ app.get("/form_compras", function(req, res){
 });
 
 app.get("/listar_compras", function(req, res){
-    res.sendFile(__dirname+"/views/listar_compras.html")
+    mapa_de_compra.findAll().then(function(listagens){
+        res.render('listagem', {listagem: listagens})
+        console.log(listagens)
+    })
 })
 
 app.post("/pegaformulario", function(req, res){

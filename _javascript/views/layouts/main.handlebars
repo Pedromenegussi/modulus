@@ -39,47 +39,16 @@
         </div>
     </div>
 </nav>   
-<table class="table table-dark">
-    <thead>
-      <tr>
-        <th scope="col">Data</th>
-        <th scope="col">PO</th>
-        <th scope="col">Cotação</th>
-        <th scope="col">Fornecedor</th>
-        <th scope="col">Qtd</th>
-        <th scope="col">PN</th>
-        <th scope="col">Descrição</th>
-        <th scope="col">Número de série</th>
-        <th scope="col">Finalidade(Chamado)</th>
-        <th scope="col">Valor($)</th>
-        <th scope="col">Valor(R$)</th>
-        <th scope="col">Frete Interno(USA)</th>
-        <th scope="col">Frete(USAxBR)</th>
-        <th scope="col">Frete Interno(BR)</th>
-        <th scope="col">Custo Final</th>
-        <th scope="col">Estorno</th>
-        <th scope="col">Forma pgto.</th>
-        <th scope="col">Forma de Envio</th>
-        <th scope="col">Recebido em</th>
-        <th scope="col">Tempo total</th>
-        <th scope="col">OBS</th>
-        <th scope="col">Nfe Entregue?</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope=""></th>
-      </tr>
-      <tr>
-        <th scope=""></th>
-      </tr>
-      <tr>
-        <th scope=""></th>
-      </tr>
-    </tbody>
-  </table>
+ {{body}}
 
-
+ <!-- Include Handlebars from a CDN -->
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script>
+  // compile the template
+  var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
+  // execute the compiled template and print the output to the console
+  console.log(template({ doesWhat: "rocks!" }));
+</script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
